@@ -40,6 +40,7 @@
     {"id":{"name":"oDamagePlayerTest","path":"objects/oDamagePlayerTest/oDamagePlayerTest.yy",},},
     {"id":{"name":"oDamageParent","path":"objects/oDamageParent/oDamageParent.yy",},},
     {"id":{"name":"sDamagePlayer","path":"sprites/sDamagePlayer/sDamagePlayer.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"oRedbullet","path":"objects/oRedbullet/oRedbullet.yy",},},
     {"id":{"name":"sSolidwall","path":"sprites/sSolidwall/sSolidwall.yy",},},
     {"id":{"name":"sPlayerUp","path":"sprites/sPlayerUp/sPlayerUp.yy",},},
@@ -58,6 +59,7 @@
     {"id":{"name":"oDamagePlayer","path":"objects/oDamagePlayer/oDamagePlayer.yy",},},
     {"id":{"name":"sPlayerLeft","path":"sprites/sPlayerLeft/sPlayerLeft.yy",},},
     {"id":{"name":"sYellowbullet","path":"sprites/sYellowbullet/sYellowbullet.yy",},},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCrate","path":"objects/oCrate/oCrate.yy",},},
     {"id":{"name":"sBlackbullet","path":"sprites/sBlackbullet/sBlackbullet.yy",},},
     {"id":{"name":"sMonterNormal","path":"sprites/sMonterNormal/sMonterNormal.yy",},},
@@ -72,6 +74,7 @@
     {"id":{"name":"oBlackbuller","path":"objects/oBlackbuller/oBlackbuller.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "TextureGroups": [
