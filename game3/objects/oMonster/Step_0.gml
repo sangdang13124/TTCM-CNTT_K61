@@ -1,17 +1,53 @@
-//đuổi theo người chơi
 
-if instance_exists(oPlayer)
+
+///trang thai
+switch(state)
+
+{
+	/// trang thai ruot duoi
+	case 0:
+	
+	if instance_exists(oPlayer)
 {
 dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 }
+////đặt đúng tốc độ
+
+spd = chaseSpd;
+    break;
+	
+////trạng thái tạm dừng và bắn
+case 1:
+	if instance_exists(oPlayer)
+{
+dir = point_direction(x,y,oPlayer.x,oPlayer.y);
+}
+///đặt đúng tốc độ
+spd=0;
+///dừng hoạt hình
+///đặt chỉ mục hình ảnh theo cách thủ công
+image_index=0;
+
+
+}
+
+
+
+//đuổi theo người chơi
+
+
 ///nhận được tốc độ
 xspd = lengthdir_x(spd  ,dir);
 yspd = lengthdir_y(spd ,dir);
 
 /// chuyen doi mat theo huong nhin
-if xspd >0{face=1;};
-if xspd <0{face=-1;};
 
+if dir>90 && dir<270
+{
+	face=-1;
+}else { 
+	face =1;
+}
 
 
 
@@ -29,6 +65,8 @@ if place_meeting(x , y+yspd, oWall) ||  place_meeting(x  ,y+yspd,oEnemyParent)
 /// di chuyen
  x += xspd;
  y += yspd;
+ ///đặt độ sâu
+ depth=-y;
 
 // nhận sát thương và chết
 event_inherited();
