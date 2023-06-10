@@ -12,8 +12,17 @@ switch(state)
 dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 }
 ////đặt đúng tốc độ
-
 spd = chaseSpd;
+
+///chuyển sang trạng thái chụp
+shootTimer++;
+if shootTimer > cooldowmTime
+{
+	////đi đến trạng thái bắn
+	state=1;
+	///đặt lại bộ đếm thời gian để chụp cũng có thể sử dụng nó
+	shootTimer=0;
+}
     break;
 	
 ////trạng thái tạm dừng và bắn
@@ -28,7 +37,30 @@ spd=0;
 ///đặt chỉ mục hình ảnh theo cách thủ công
 image_index=0;
 
+// ban 1 vien dan 
+shootTimer++;
+//tao vien dan
+if shootTimer==1
+{
+	bulletInst = instance_create_depth(x,y,depth,oEnemybullet);
+}
 
+///bắn viên đạn sau khi thời gian hen gio kết thúc
+if shootTimer == windupTimer && instance_exists(bulletInst)
+{
+	bulletInst.state=1;
+}
+
+///phục hồi và quay lại đuổi theo người chơi
+if shootTimer > windupTimer + recoverTimer
+{
+	// duoi theo nguoi choi
+	state = 0;
+	///đặt lại bộ đếm thời gian để chúng tôi có thể sử dụng lại
+	shootTimer=0;
+}
+
+break;
 }
 
 

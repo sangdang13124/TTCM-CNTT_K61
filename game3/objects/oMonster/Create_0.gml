@@ -13,4 +13,14 @@ yspd = 0;
 face=1;
 ///tình trạng
 state = 1 ;
+/// ban dan
+shootTimer=0;
+
+//hẹn giờ 
+windupTimer=60;
+
+///phục hồi hẹn giờ
+cooldowmTime = 4*60;
+recoverTimer=45;
+ bulletInst= noone;
 

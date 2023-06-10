@@ -6,6 +6,7 @@ yspd =lengthdir_y(spd,dir);
  y+=yspd;
  ///cleanup
  ///nhấn xác nhận phá hủy
+ image_angle=dir;
  
  if hitConfirm == true && enemyDistroy == true { destroy=true ;};
  
