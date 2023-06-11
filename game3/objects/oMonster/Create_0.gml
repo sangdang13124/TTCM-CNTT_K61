@@ -17,10 +17,10 @@ state = 1 ;
 shootTimer=0;
 
 //hẹn giờ 
-windupTimer=60;
+windupTimer=10;
 
 ///phục hồi hẹn giờ
-cooldowmTime = 4*60;
-recoverTimer=45;
+cooldowmTime = 2*60;
+recoverTimer=20;
  bulletInst= noone;
 

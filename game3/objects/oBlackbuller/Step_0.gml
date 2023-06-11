@@ -1,6 +1,6 @@
 ///move
-xspd = lengthdir_x(spd,dir);
-yspd =lengthdir_y(spd,dir);
+xspd = lengthdir_x(spd*0.7,dir);
+yspd =lengthdir_y(spd*0.7,dir);
 
  x+=xspd;
  y+=yspd;
