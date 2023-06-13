@@ -15,7 +15,16 @@ dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 spd = chaseSpd;
 
 ///chuyển sang trạng thái chụp
+var _camLeft = camera_get_view_x(view_camera[0]);
+var _camRight = _camLeft + camera_get_view_width(view_camera[0]);
+var _camTop = camera_get_view_y(view_camera[0]);
+var _camBottom = _camTop + camera_get_view_height(view_camera[0]);
+//chỉ thêm vào bộ đếm thời gian nếu trên màn hình (khi enemy khong co tren man hinh thi se khong ban nguoi choi)
+if bbox_right > _camLeft && bbox_left < _camRight && bbox_bottom>_camTop && bbox_top< _camBottom
+{
 shootTimer++;
+}
+
 if shootTimer > cooldowmTime
 {
 	////đi đến trạng thái bắn
@@ -27,6 +36,7 @@ if shootTimer > cooldowmTime
 	
 ////trạng thái tạm dừng và bắn
 case 1:
+#region
 	if instance_exists(oPlayer)
 {
 dir = point_direction(x,y,oPlayer.x,oPlayer.y);
@@ -42,7 +52,14 @@ shootTimer++;
 //tao vien dan
 if shootTimer==1
 {
-	bulletInst = instance_create_depth(x,y,depth,oEnemybullet);
+	bulletInst = instance_create_depth(x+bulletXoff*face,y,depth+bulletYoff,oEnemybullet);
+}
+
+///giữ viên đạn trong tay quái vật
+if shootTimer<= windupTimer && instance_exists(bulletInst)
+{
+	bulletInst.x = x + bulletXoff*face;
+	bulletInst.y = y + bulletYoff;
 }
 
 ///bắn viên đạn sau khi thời gian hen gio kết thúc
@@ -59,7 +76,7 @@ if shootTimer > windupTimer + recoverTimer
 	///đặt lại bộ đếm thời gian để chúng tôi có thể sử dụng lại
 	shootTimer=0;
 }
-
+#endregion
 break;
 }
 

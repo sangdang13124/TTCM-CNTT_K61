@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "game3",
-    "path": "game3.yyp",
+    "name": "group1",
+    "path": "folders/group1.yy",
   },
   "parentObjectId": null,
   "persistent": true,

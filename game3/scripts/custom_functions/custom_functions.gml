@@ -21,7 +21,7 @@ draw_sprite_ext(weapon.sprite,0,x+_xOffset	,centerY+_yOffset,1,_weaponYscl,aimDi
 	///sự kiện tạo thiệt hại
 	function get_damaged_create(_hp = 10 , _iframes=false)
 	{
-		
+	 maxHp=_hp;
      hp = _hp ;
 	 ///get the iframes
 	 if _iframes == true
@@ -66,6 +66,8 @@ function get_damaged( _damageObj ,_iframes = false)
 			image_alpha=1;
 		}
 	}
+	 //clamp hp
+       hp = clamp(hp,0,maxHp);
 		exit;
 		
 	}
@@ -146,8 +148,9 @@ for( var i = 0 ; i < _damageListSize; i++)
 	   i--;
 	   _damageListSize--;
    }
-  }
-	
-	
+  }		
  }
+ //clamp hp
+ hp = clamp(hp,0,maxHp);
+ 
 }

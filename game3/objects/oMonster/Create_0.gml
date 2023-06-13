@@ -10,17 +10,23 @@ dir = 0;
 xspd = 0;
 yspd = 0;
 
-face=1;
+face= 1 ;
 ///tình trạng
-state = 1 ;
-/// ban dan
-shootTimer=0;
+state = 0 ;
 
-//hẹn giờ 
-windupTimer=10;
+
+
 
 ///phục hồi hẹn giờ
-cooldowmTime = 2*60;
-recoverTimer=20;
+cooldowmTime = 4*60;
+
+/// ban dan
+shootTimer=  irandom(cooldowmTime);
+//hẹn giờ 
+windupTimer=60;
+recoverTimer=45;
  bulletInst= noone;
+ 
+ bulletXoff=5;
+ bulletYoff=-8;
 

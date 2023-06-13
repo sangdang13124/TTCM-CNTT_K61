@@ -1,10 +1,10 @@
 ///nhận đầu vào
-rightKey = keyboard_check( ord("D" ) );
-leftKey = keyboard_check( ord("A" ) );
-upKey = keyboard_check( ord("W" ) );
-downKey = keyboard_check( ord("S" ) );
-shootKey= mouse_check_button(mb_left);
-swapKeyPressed=mouse_check_button_pressed(mb_right);
+rightKey = global.rightKey;
+leftKey = global.leftKey;
+upKey = global.upKey;
+downKey = global.downKey;
+shootKey= global.shootKey;
+swapKeyPressed=global.swapKeyPressed;
 
 
 
@@ -13,6 +13,10 @@ swapKeyPressed=mouse_check_button_pressed(mb_right);
 
 ///nhận thiệt hại
 get_damaged(oDamagePlayer,true);
+
+///chet / thua game
+
+
 
 
 #region
@@ -94,9 +98,18 @@ if shootKey && shootTimer<=0
 
 	
 	var _bulletInst = instance_create_depth(x + _xOffset + i*3, centerY + _yOffset ,depth-100,weapon.bulletObj);
+	var _s =id;
 	with (_bulletInst)
 	{
-		dir=other.aimDir - _spread / 2 + _spreadDiv*i;
+		dir=_s.aimDir - _spread / 2 + _spreadDiv*i;
 	}
 	 }
+}
+
+if hp<=0
+{
+	instance_create_depth(0,0,-10000,oGamerOverScreen);
+	//ban than tieu diet
+	instance_destroy();
+	
 }
