@@ -1,5 +1,5 @@
 /// cac mau vu khi
-function create_waepon(_sprite = sBlack,_weaponLength = 0,_bulletObj = oBlackbuller,_cooldowm = 1,_bulletNum = 1,_spread = 0)  constructor
+function create_waepon(_sprite = sBlack,_weaponLength = 0,_bulletObj = oBlackbuller,_cooldowm = 1,_bulletNum = 1,_spread = 0,_pickupSpirte=sBlackPickup)  constructor
 {
 	sprite = _sprite;
 	length = _weaponLength;
@@ -7,7 +7,7 @@ function create_waepon(_sprite = sBlack,_weaponLength = 0,_bulletObj = oBlackbul
 	cooldowm = _cooldowm;
 	bulletNum=_bulletNum;
 	spread = _spread;
-
+	pickupSpirite= _pickupSpirte;
 }
 ///người chơi là nhà phát minh vũ khí
 
@@ -19,7 +19,7 @@ global.WeaponList =
 {
 
 
-black : new create_waepon(
+     black : new create_waepon(
 	
 	 sBlack,
 	 sprite_get_bbox_right(sBlack) - sprite_get_xoffset(sBlack),
@@ -27,6 +27,7 @@ black : new create_waepon(
 	 40,
 	 1,
 	 0,
+	 sBlackPickup
 	),
 	
 	yellow : new create_waepon(
@@ -34,9 +35,10 @@ black : new create_waepon(
 	 sBlackYellow,
      sprite_get_bbox_right(sBlackYellow) + sprite_get_xoffset(sBlack) ,
 	 oYellowbullet,
-	 10,
-	 1,
-	 1,
+	 3,
+	 3,
+	 120,
+	 sBlackYellowPickup
 	 	),
 		
 	 red : new create_waepon(
@@ -46,6 +48,6 @@ black : new create_waepon(
 	 15,
 	 6,
 	 90,
-
+     sRedpickup
 	),
 }

@@ -1,9 +1,43 @@
+//menh lenh
+var _wallCollisions = true;
 
+var _getDamage = true ;
 
 ///trang thai
 switch(state)
-
 {
+	///sinh ra từ lăng mộ
+	case -1:
+	///mờ dần 
+	if image_alpha <1
+	{
+		///không bước đi trong khi mờ dần 
+		spd=0;
+		image_alpha += fadeSpd;
+	}
+	/// di ra ngoai
+	_wallCollisions=false;
+	_getDamage=false;
+	
+	if image_alpha >= 1
+	{
+///đặt hướng kết thúc tốc độ phù hợp
+	spd=emergeSpd;
+	dir=270
+	}
+	
+	///chuyển sang trạng thái rượt đuổi sau khi da ra khoi hang sinh quai vat
+	if !place_meeting(x,y,oWall)
+	{
+		state=0;
+	}
+	break;
+	
+	
+	
+	
+	
+	
 	/// trang thai ruot duoi
 	case 0:
 	
@@ -101,15 +135,15 @@ if dir>90 && dir<270
 
 
 ///va cham
-if place_meeting(x + xspd , y, oWall) ||  place_meeting(x + xspd ,y,oEnemyParent)
+/// va cham voi tuong 
+if _wallCollisions == true
 {
-	xspd = 0;
+if place_meeting(x + xspd , y, oWall) {xspd = 0;}
+if place_meeting(x , y + yspd , oWall) {yspd = 0;}
+///quai vat va cham voi nhau
+if place_meeting(x + xspd , y, oEnemyParent) {xspd=0;}
+if place_meeting(x , y + yspd , oEnemyParent) {yspd=0;}
 }
-if place_meeting(x , y+yspd, oWall) ||  place_meeting(x  ,y+yspd,oEnemyParent)
-{
-	yspd = 0;
-}
-
 
 /// di chuyen
  x += xspd;
@@ -118,5 +152,7 @@ if place_meeting(x , y+yspd, oWall) ||  place_meeting(x  ,y+yspd,oEnemyParent)
  depth=-y;
 
 // nhận sát thương và chết
+if _getDamage == true
+{
 event_inherited();
-
+}

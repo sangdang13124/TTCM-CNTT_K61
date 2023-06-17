@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "game3",
-    "path": "game3.yyp",
+    "name": "WallObjects",
+    "path": "folders/WallObjects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

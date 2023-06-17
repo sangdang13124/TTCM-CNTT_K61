@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sTilesOutside",
-  "bbox_bottom": 175,
+  "bbox_bottom": 191,
   "bbox_left": 0,
   "bbox_right": 143,
   "bbox_top": 0,

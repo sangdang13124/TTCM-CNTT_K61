@@ -76,9 +76,10 @@ if swapKeyPressed
 	///thay đổi lựa chọn và trao đổi vòng
 	selectedWeapon++;
 	if selectedWeapon >= array_length( _playerWeapons ) { selectedWeapon=0; };
+
+}
 	///đặt vũ khí mới
 	weapon = _playerWeapons[selectedWeapon];
-}
 
 #endregion
 ///shoot the weapon

@@ -78,7 +78,8 @@ function get_damaged( _damageObj ,_iframes = false)
 	}
 
 	////nhận thiệt hại
-if place_meeting(x,y,_damageObj)
+	var _hitConfirm=false;
+if place_meeting(x,y,_damageObj)||(_damageObj != oDamageParent&&place_meeting(x,y,oDamageAll))
 {
 
 	
@@ -89,8 +90,12 @@ if place_meeting(x,y,_damageObj)
      var _instList = ds_list_create();
 	 
 	 instance_place_list(x,y,_damageObj,_instList,false);
-	 ///lấy kích thước của danh sách ra
+	 if _damageObj != oDamageParent
+	 {
+	 instance_place_list(x,y,oDamageAll,_instList,false);
+	 }
 	 
+	 ///lấy kích thước của danh sách ra
 	 var _List_size=ds_list_size( _instList);
 	 ///lặp qua danh sách
 	 var _hitConfirm = false;

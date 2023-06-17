@@ -13,7 +13,9 @@ yspd = 0;
 face= 1 ;
 ///tình trạng
 state = 0 ;
-
+/// sinh ra tu trong mo
+fadeSpd=1/15;
+emergeSpd=.25;
 
 
 

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 3,
   "parent": {
-    "name": "game3",
-    "path": "game3.yyp",
+    "name": "WallObjects",
+    "path": "folders/WallObjects.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

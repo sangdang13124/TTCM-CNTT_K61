@@ -16,4 +16,4 @@ draw_my_weapon();
 }
 
 ///vẽ hp như một số
-draw_text(x, y ,string (hp) );
+
