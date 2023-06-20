@@ -12,8 +12,10 @@ if hp<=0{
 		image_xscale=1.5;
         image_yscale=1.5;
 	}
-	//dung man hinh
-
+	//dung man hinh 1 khoang thoi gian nho
+create_screen_pause();
+///rung man hinh
+screen_shake(8);
 	
 	//bien mat
 

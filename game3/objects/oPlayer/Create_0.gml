@@ -1,6 +1,9 @@
+if instance_number(oPlayer) > 1 {instance_destroy();};
+
+
 ///thiết lập thiệt hại
 
-get_damaged_create(20,true);
+get_damaged_create(10,true);
 
 
 
@@ -9,7 +12,7 @@ moveDir = 0;
 moveSpd = 2;
 xspd = 0;
 yspd =0;
-
+//dirFix=true;
 
 
 #region
@@ -17,7 +20,7 @@ centerYOffset=-5;
 ///set in step event
 centerY = y + centerYOffset;
 weaponOffsetDist = 4;
-aimDir= 0 ;
+aimDir= 0;
 
 
 face = 3 ;

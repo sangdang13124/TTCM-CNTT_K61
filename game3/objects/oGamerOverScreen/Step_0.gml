@@ -1,5 +1,8 @@
-///lấy đầu vào phím bắn
+
+
+//lấy đầu vào phím bắn
 shootKey=global.shootKey;
+
 
 
 
@@ -8,9 +11,11 @@ shootKey=global.shootKey;
 alpha += alphaSpd;
 alpha = clamp(alpha,0,1);
 
-//// restar
-if shootKey && alpha >= 1
+// restar
+if  shootKey&&alpha >= 1
 {
+	
 	room_restart();
 	
 }
+

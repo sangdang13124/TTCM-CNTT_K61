@@ -6,3 +6,4 @@ global.upKey =0;
 global.downKey=0;
 global.shootKey=0;
 global.swapKeyPressed=0;
+global.startKeyPressed =0;

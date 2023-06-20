@@ -1,3 +1,5 @@
+///dung man hinh
+if screen_pause() {exit;};
 
 if createDamageObjects == false
 {

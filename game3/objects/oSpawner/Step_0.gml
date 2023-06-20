@@ -1,3 +1,6 @@
+
+///dung man hinh
+if screen_pause() {exit;};
 ///sinh quai
 timer++;
 

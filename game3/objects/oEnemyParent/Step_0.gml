@@ -13,7 +13,8 @@ if hp <= 0
 	{
 	instance_create_depth(x,y,depth,oHeart);
 	}
-	
+	///fvx boom
+	instance_create_depth(x,y,depth,oAnimatedVFX);
 	///quai chet
 	instance_destroy();	
 }

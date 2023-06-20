@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function draw_my_weapon(){
 ///draw the weapon
 ///lấy vũ khí ra khỏi người chơi là cơ thể
@@ -14,10 +13,47 @@ _weaponYscl	= -1 ;
 draw_sprite_ext(weapon.sprite,0,x+_xOffset	,centerY+_yOffset,1,_weaponYscl,aimDir,c_white,image_alpha);
 }
 	
+	///vfx
+	function screen_pause()
+{
+	if instance_exists(oScreenPause)
+  {
+	image_speed = 0;
+	return true ;
+  }else{
+	image_speed = 1;
+	return false;
+  }
+}
+	function create_screen_pause(_time=3)
+	{
+		with( instance_create_depth(0,0,0,oScreenPauseTimed))
+		{
+			timer=_time;
+		}
+		
+	}
+	function screen_shake(_amount=4)
+	{
+		with(oCamera)
+		{
+			xShakeAmount=_amount;
+			yShakeAmount=_amount;
+		}
+	}
+	function create_animated_vfx(_sprite,_x,_y,_depth,_rot=0)
+	{
+		with(instance_create_depth(_x,_y,_depth,oAnimatedVFX))
+		{
+			sprite_index = _sprite;
+			image_angle =_rot;
+		}
+	}
 	
 	
+	
+
 	///tính toán thiệt hại
-	
 	///sự kiện tạo thiệt hại
 	function get_damaged_create(_hp = 10 , _iframes=false)
 	{
@@ -68,7 +104,8 @@ function get_damaged( _damageObj ,_iframes = false)
 	}
 	 //clamp hp
        hp = clamp(hp,0,maxHp);
-		exit;
+	////thoát bằng cách trả về hàm sai
+	return false;
 		
 	}
 	///đảm bảo iframe nháy  dừng lại
@@ -84,7 +121,6 @@ if place_meeting(x,y,_damageObj)||(_damageObj != oDamageParent&&place_meeting(x,
 
 	
 	///	lấy danh sách các trường hợp thiệt hại
-	
 	    ////tạo danh sách ds và sao chép thể hiện vào danh sách
 	
      var _instList = ds_list_create();
@@ -98,7 +134,7 @@ if place_meeting(x,y,_damageObj)||(_damageObj != oDamageParent&&place_meeting(x,
 	 ///lấy kích thước của danh sách ra
 	 var _List_size=ds_list_size( _instList);
 	 ///lặp qua danh sách
-	 var _hitConfirm = false;
+	
 	 for(var i=0 ; i < _List_size ; i++ )
 	 {
 		 
@@ -121,6 +157,8 @@ if  _iframes=true ||  ds_list_find_index(damageList,_inst)==-1
 	  _hitConfirm = true;
 	///cho biết mức độ thiệt hại mà nó đã tác động
       _inst.hitConfirm = true;
+	  
+	  instance_create_depth(x,y,depth-50,oBoomBulet);
 	  
           }
 		 	 
@@ -157,5 +195,6 @@ for( var i = 0 ; i < _damageListSize; i++)
  }
  //clamp hp
  hp = clamp(hp,0,maxHp);
- 
+ ///tra ve hit confirm gia tri hop le 
+ return _hitConfirm;
 }

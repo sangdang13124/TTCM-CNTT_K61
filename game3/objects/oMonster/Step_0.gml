@@ -1,6 +1,11 @@
+/// tạm dừng bản thân
+if screen_pause() {exit;};
+
+
+
+
 //menh lenh
 var _wallCollisions = true;
-
 var _getDamage = true ;
 
 ///trang thai
