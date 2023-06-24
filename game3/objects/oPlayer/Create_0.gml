@@ -34,7 +34,7 @@ sprite[3] = sPlayerDown;
 shootTimer=0;
 
 ///thêm vũ khí vào kho vũ khí của người chơi
-array_push(global.PlayerWeapons, global.WeaponList.black);
+array_push(global.PlayerWeapons, global.WeaponList.black); array_push(global.PlayerAmmo,5);
 
  
 selectedWeapon = 0 ;

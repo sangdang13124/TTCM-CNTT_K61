@@ -6,7 +6,9 @@ upKey = global.upKey;
 downKey = global.downKey;
 shootKey= global.shootKey;
 swapKeyPressed=global.swapKeyPressed;
-startKeyPressed=global.startKeyPressed
+startKeyPressed=global.startKeyPressed;
+
+
 ///menu dung man hinh
 if startKeyPressed
 {
@@ -113,8 +115,14 @@ if swapKeyPressed
 #endregion
 ///shoot the weapon
 if shootTimer>0{shootTimer--;};
-if shootKey && shootTimer<=0
+if shootKey && shootTimer<=0 && (global.PlayerAmmo[selectedWeapon]>0||weapon==global.WeaponList.black)
 {
+	//tru di so dan
+	if weapon  !=global.WeaponList.black
+	{
+	global.PlayerAmmo[selectedWeapon]--;
+	}
+	//lap lai
 	shootTimer=weapon.cooldowm;
 	
 	///rung man hinh khi ban

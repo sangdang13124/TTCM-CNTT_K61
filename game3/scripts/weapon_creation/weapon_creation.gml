@@ -1,5 +1,5 @@
 /// cac mau vu khi
-function create_waepon(_sprite = sBlack,_weaponLength = 0,_bulletObj = oBlackbuller,_cooldowm = 1,_bulletNum = 1,_spread = 0,_pickupSpirte=sBlackPickup)  constructor
+function create_waepon(_sprite = sBlack,_weaponLength = 0,_bulletObj = oBlackbuller,_cooldowm = 1,_bulletNum = 1,_spread = 0,_pickupSpirte=sBlackPickup,_ammo=0)  constructor
 {
 	sprite = _sprite;
 	length = _weaponLength;
@@ -8,12 +8,13 @@ function create_waepon(_sprite = sBlack,_weaponLength = 0,_bulletObj = oBlackbul
 	bulletNum=_bulletNum;
 	spread = _spread;
 	pickupSpirite= _pickupSpirte;
+	ammo=_ammo;
 }
 ///người chơi là nhà phát minh vũ khí
 
 
 global.PlayerWeapons = array_create(0);
-
+global.PlayerAmmo = array_create(0);
 
 global.WeaponList =
 {

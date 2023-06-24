@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "all",
-    "path": "folders/all.yy",
+    "name": "game3",
+    "path": "game3.yyp",
   },
   "parentObjectId": {
     "name": "oEnemyParent",

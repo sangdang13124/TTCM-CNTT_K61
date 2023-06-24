@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "game3",
-    "path": "game3.yyp",
+    "name": "Enemies",
+    "path": "folders/Enemies.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

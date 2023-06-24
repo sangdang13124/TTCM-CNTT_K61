@@ -20,6 +20,14 @@ if i+1 <= playerHP {_img=2;};
 var _sep=3;
 draw_sprite(sHealthbar,_img,_hudX+_sep*i,_hudY);
   }
+  var _offset=8;
+  var _Offset = _offset;
+  if oPlayer.aimDir < 360 && oPlayer.aimDir > 270{_Offset = -_Offset;}
+   if oPlayer.aimDir < 135 && oPlayer.aimDir > 45{_Offset = -_Offset;}
+  var _ammoX =oPlayer.x+  _Offset;
+  var _ammoY =oPlayer.y+  _offset;
+  draw_text_transformed(_ammoX,_ammoY,string(global.PlayerAmmo[oPlayer.selectedWeapon]),0.5,0.5,0);
+  
 }
 // ve ra so quai bi giet
 var _enemyCountOffset = 24 ;
@@ -36,3 +44,10 @@ draw_set_font(Font1);
   draw_text_transformed(_ecHudX+30,_ecHudY+1,string(global.enemyKillCount),0.6,0.6,0);
   // tong so ke dich
  draw_text_transformed(_ecHudX+45,_ecHudY+1,"/"+string(global.enemyRoomMax),0.6,0.6,0);
+ 
+///ve ra so dan
+var _playerammo = global.PlayerAmmo;
+for (var i=0;i<array_length(_playerammo) ; i++)
+{
+	draw_text(_ecHudX,_ecHudY+32+16*i,string(_playerammo[i]));
+}

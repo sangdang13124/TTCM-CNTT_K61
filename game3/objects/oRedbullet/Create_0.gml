@@ -3,6 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
-maxDist=90;
-enemyDistroy=true;
+maxDist=45;
+
 

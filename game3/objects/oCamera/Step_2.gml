@@ -9,6 +9,8 @@ if instance_exists(oPlayer)
 	y= oPlayer.centerY  -_camH/2;
 }
 
+	
+
 ///camera shaking
 //if global.swapKeyPressed{
 //screen_shake(4);
