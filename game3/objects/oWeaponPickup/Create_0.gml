@@ -24,9 +24,24 @@ if image_index == 1
 if image_index == 2
 {
 	weapon= global.WeaponList.red;
-	ammoAdd=20;
+	ammoAdd=100;
 }
+if image_index == 3
+{
+	weapon= global.WeaponList.bazoka;
+	ammoAdd=100;
+}
+if image_index == 4
+{
+	weapon= global.WeaponList.suriken;
+	ammoAdd=100;
+}
+if image_index == 5
+{
+	weapon= global.WeaponList.BoomHa;
+	ammoAdd=100;
 
+}
 // dat dung trang thai
 
 sprite_index=weapon.pickupSpirite;

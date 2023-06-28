@@ -3,6 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
-maxDist=45;
-
-
+maxDist=70;
+destroy=false;
+dir=0;

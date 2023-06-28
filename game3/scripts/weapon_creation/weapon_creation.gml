@@ -34,7 +34,7 @@ global.WeaponList =
 	yellow : new create_waepon(
 	
 	 sBlackYellow,
-     sprite_get_bbox_right(sBlackYellow) + sprite_get_xoffset(sBlack) ,
+     sprite_get_bbox_right(sBlackYellow) + sprite_get_xoffset(sBlackYellow) ,
 	 oYellowbullet,
 	 3,
 	 1,
@@ -48,7 +48,35 @@ global.WeaponList =
 	 oRedbullet,
 	 15,
 	 6,
-	 90,
+	 60,
      sRedpickup
+	),
+	
+	 bazoka : new create_waepon(
+	 sBazoka,
+     sprite_get_bbox_right(sBazoka) - sprite_get_xoffset(sBazoka) ,
+	 oBazoka,
+	 15,
+	 1,
+	 0,
+     sBazokaPickup
+	),
+	suriken : new create_waepon(
+	 sSuriken,
+     sprite_get_bbox_right(sSuriken) - sprite_get_xoffset(sSuriken) ,
+	 oSurikenBullet,
+	 15,
+	 1,
+	 0,
+     sSurikenPickup
+	),
+	BoomHa : new create_waepon(
+	 sBoomHa,
+     sprite_get_bbox_right(sSuriken) - sprite_get_xoffset(sSuriken) ,
+	 oBoomHaBullet,
+	 15,
+	 1,
+	 0,
+     sBoomHaPickup
 	),
 }

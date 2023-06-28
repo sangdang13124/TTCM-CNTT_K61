@@ -114,7 +114,9 @@ if shootTimer > windupTimer + recoverTimer
 	state = 0;
 	///đặt lại bộ đếm thời gian để chúng tôi có thể sử dụng lại
 	shootTimer=0;
+	
 }
+
 #endregion
 break;
 }
@@ -143,12 +145,16 @@ if dir>90 && dir<270
 /// va cham voi tuong 
 if _wallCollisions == true
 {
+	
 if place_meeting(x + xspd , y, oWall) {xspd = 0;}
 if place_meeting(x , y + yspd , oWall) {yspd = 0;}
+
+check_for_player()
 ///quai vat va cham voi nhau
 if place_meeting(x + xspd , y, oEnemyParent) {xspd=0;}
 if place_meeting(x , y + yspd , oEnemyParent) {yspd=0;}
 }
+
 
 /// di chuyen
  x += xspd;

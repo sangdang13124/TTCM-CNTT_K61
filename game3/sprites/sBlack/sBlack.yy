@@ -13,11 +13,11 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f7982463-e5a3-48e9-a806-bbd633a871a9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c71cf872-2015-4b03-af78-4d4fcf8f3667",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 10,
+  "height": 18,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c981b3f3-0ba8-449d-843c-c356e6f2b7d7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -54,13 +54,13 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f7982463-e5a3-48e9-a806-bbd633a871a9","path":"sprites/sBlack/sBlack.yy",},},},"Disabled":false,"id":"9e7847f0-4a44-4979-a743-c7bc38119856","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c71cf872-2015-4b03-af78-4d4fcf8f3667","path":"sprites/sBlack/sBlack.yy",},},},"Disabled":false,"id":"c7f3b78f-7b23-4b90-bde8-d283d34020cd","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 2,
-    "yorigin": 2,
+    "xorigin": 7,
+    "yorigin": 9,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 19,
+  "width": 18,
 }

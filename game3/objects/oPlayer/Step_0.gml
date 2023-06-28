@@ -9,6 +9,8 @@ swapKeyPressed=global.swapKeyPressed;
 startKeyPressed=global.startKeyPressed;
 
 
+
+
 ///menu dung man hinh
 if startKeyPressed
 {
@@ -56,7 +58,7 @@ var _horizkey = rightKey - leftKey;
 var _vertKey = downKey - upKey;
 moveDir = point_direction(0,0, _horizkey,_vertKey);
 
-// get the x and y speeds
+// them x y 2 bien toa do
 var _spd = 0;
 var _inputLevel = point_distance(0,0, _horizkey, _vertKey);
 _inputLevel = clamp(_inputLevel,0,1);

@@ -13,7 +13,8 @@ moveSpd = 2;
 xspd = 0;
 yspd =0;
 //dirFix=true;
-
+cursor_sprite=tamban;
+window_set_cursor(cr_none);
 
 #region
 centerYOffset=-5;
@@ -35,6 +36,7 @@ shootTimer=0;
 
 ///thêm vũ khí vào kho vũ khí của người chơi
 array_push(global.PlayerWeapons, global.WeaponList.black); array_push(global.PlayerAmmo,5);
+
 
  
 selectedWeapon = 0 ;

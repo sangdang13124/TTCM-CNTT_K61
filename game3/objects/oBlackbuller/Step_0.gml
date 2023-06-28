@@ -29,5 +29,30 @@ if place_meeting(x,y,oSolidwall){destroy = true;};
  
 
 
-if point_distance(xstart,ystart,x,y)>maxDist{	destroy=true;};
+    if point_distance(xstart,ystart,x,y)>maxDist{	destroy=true;};
+
+//2  if point_distance(xstart,ystart,x,y)>maxDist{
+//xspd = lengthdir_x(spd,dir);
+//yspd =lengthdir_y(spd,dir);
+
+ //x+=xspd;
+ //y+=yspd;	};
+ 
+ 	
+ //if point_distance(xstart,ystart,x,y)>maxDist{
+	 
+	//  if instance_exists(oPlayer)
+	// {
+	//	 dir = point_direction(x,y,oPlayer.x,oPlayer.y);
+	
+//xspd = lengthdir_x(spd,dir);
+//yspd = lengthdir_y(spd,dir);
+
+// x+=xspd;
+// y+=yspd;
+
+ 
+ // }
+  // destroy=true;
+ //};
 //destroy
