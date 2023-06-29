@@ -91,7 +91,7 @@ shootTimer++;
 //tao vien dan
 if shootTimer==1
 {
-	bulletInst = instance_create_depth(x+bulletXoff*face,y,depth+bulletYoff,oEnemybullet);
+	bulletInst = instance_create_depth(x+bulletXoff*face,y,depth+bulletYoff,oEnemyBulletNormal);
 }
 
 ///giữ viên đạn trong tay quái vật

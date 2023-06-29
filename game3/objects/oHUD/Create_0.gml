@@ -5,10 +5,10 @@ deth = -9000;
 playerHP = 0;
 playerMaxHp=0;
 // quan li quai vat
-global.enemyRoomMax = 100;
+global.enemyRoomMax = 1000;
 global.activeEnemyMax = 100;
 global.totaEnemiesSpawned = 0;
-global.enemyKillCount = 100;
+global.enemyKillCount = 1000;
 
 
 

@@ -37,7 +37,7 @@ global.WeaponList =
      sprite_get_bbox_right(sBlackYellow) + sprite_get_xoffset(sBlackYellow) ,
 	 oYellowbullet,
 	 3,
-	 1,
+	 3,
 	 0,
 	 sBlackYellowPickup
 	 	),
